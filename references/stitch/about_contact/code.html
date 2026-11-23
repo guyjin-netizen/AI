@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="zh-TW"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#131313;color:#e5e2e1;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-container-low": "#1c1b1b", "secondary-container": "#d97722", "on-error": "#690005", "outline-variant": "#534434", "surface": "#131313", "background": "#131313", "on-tertiary": "#4d2600", "on-tertiary-fixed-variant": "#6e3900", "surface-variant": "#353534", "on-primary": "#472a00", "secondary-fixed": "#ffdcc5", "on-secondary-fixed-variant": "#713700", "on-secondary-container": "#451f00", "inverse-primary": "#855300", "on-background": "#e5e2e1", "tertiary-container": "#ff9837", "primary-container": "#f59e0b", "on-secondary-fixed": "#301400", "on-error-container": "#ffdad6", "on-primary-fixed": "#2a1700", "primary-fixed-dim": "#ffb95f", "surface-tint": "#ffb95f", "inverse-on-surface": "#313030", "surface-bright": "#393939", "primary-fixed": "#ffddb8", "on-primary-container": "#613b00", "outline": "#a08e7a", "on-secondary": "#4f2500", "surface-container": "#201f1f", "error": "#ffb4ab", "inverse-surface": "#e5e2e1", "tertiary-fixed": "#ffdcc3", "error-container": "#93000a", "secondary-fixed-dim": "#ffb783", "surface-container-lowest": "#0e0e0e", "surface-container-highest": "#353534", "surface-dim": "#131313", "on-tertiary-container": "#6a3700", "tertiary-fixed-dim": "#ffb77d", "on-surface": "#e5e2e1", "tertiary": "#ffc08e", "primary": "#ffc174", "surface-container-high": "#2a2a2a", "on-primary-fixed-variant": "#653e00", "on-tertiary-fixed": "#2f1500", "on-surface-variant": "#d8c3ad", "secondary": "#ffb783" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "gutter-mobile": "1rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "margin-mobile": "1.25rem", "space-md": "1rem", "margin": "3rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "gutter": "1.5rem" }, fontFamily: { "label-sm": ["Inter"], "headline-md": ["Inter"], "body-md": ["Inter"], "display-hero-mobile": ["Inter"], "body-sm": ["Inter"], "label-md": ["Inter"], "headline-sm": ["Inter"], "headline-lg": ["Inter"], "body-lg": ["Inter"], "display-hero": ["Inter"], "headline-lg-mobile": ["Inter"] }, fontSize: { "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.03em", "fontWeight": "500" }], "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "600" }], "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_12px_rgba(0,0,0,0.4)]"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Yi-ting Brand Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/ALJJyrCkae46lxkDIyjKEGba-_HSc1wyOo8qCLBq4PwuZem5GtCvLPFuo9XkmWoxoJrnrVWx5rQkc89YnCRpHh4yfZhhnBUZUgdR5RDp3BaZdBwDT9cl-JdnbU7LtVp2whKqO7k28N1hYFZW3rDlNCnfX8m5YPp3HVMEOnCOC7PenaP0PhPkoQH6mJe8QAyNQ8cP5lkUT6nWK_LFdpkorfX4LlRG7HteOjTwmXJPbQ71lFUQ"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight truncate">Yi-ting</span><span class="font-label-sm text-label-sm text-outline px-1.5 py-0.5 rounded bg-surface-container-high hidden sm:inline">黃翊庭</span></div><span class="font-label-sm text-label-sm text-primary tracking-wide truncate">About Artist</span></div></div><div class="flex items-center gap-space-sm shrink-0"><a class="h-11 px-3.5 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md flex items-center justify-center gap-1.5 hover:bg-secondary-container transition-colors" data-path="contact" href="#"><span class="material-symbols-outlined text-[18px]">mail</span><span class="whitespace-nowrap">聯絡</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 bg-surface min-h-[calc(100vh-5rem)]"><div class="flex flex-col w-full">
+<!-- Profile & Hero Section -->
+<section class="px-margin-mobile pt-space-md pb-space-lg flex flex-col gap-space-lg">
+<!-- Artist Spotlight Card -->
+<div class="relative w-full rounded-xl bg-surface-container overflow-hidden shadow-xl">
+<!-- Ambient Studio Glow -->
+<div class="absolute -top-16 -right-16 w-48 h-48 rounded-full bg-primary-container/20 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-10 -left-10 w-36 h-36 rounded-full bg-secondary-container/15 blur-2xl pointer-events-none"></div>
+<div class="relative p-space-md flex flex-col gap-space-md">
+<!-- Visual Header: Avatar & Status -->
+<div class="flex items-center gap-space-md">
+<div class="relative shrink-0">
+<div class="w-20 h-20 rounded-full overflow-hidden bg-surface-container-high shadow-md">
+<img class="w-full h-full object-cover" data-alt="Warm cinematic studio portrait of Yi-ting Huang, an independent female 2D animator and multimedia artist holding a stylus pen, bathed in soft amber backlight and dark indigo shadows, painterly texture, highly detailed expressive eyes, art director vibe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDi4OoqKzqahsW0Lm5-U5uK7-FgDCGfXv4qryipTxah6YCiZXVvF-MJv7dFCofKEEWuHxYX_VqurdVsvQ-2-OLrKZNLR9KCeRrjwBeTxJckvRNADMyXspSc_EsDoCcI5mi1afU0DRERhIWryTgT_nKgB-rwzCNxloDND6S7mwbsTV7ROdAVPHGic5MXKiF6k2vowH4q9K0K1O1tI6OZguGr_GbEItpfCF89HbxBAtw"/>
+</div>
+<div class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-surface-container-lowest flex items-center justify-center">
+<span class="w-3.5 h-3.5 rounded-full bg-primary-container animate-ping absolute opacity-75"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-primary-container relative"></span>
+</div>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-primary tracking-wider uppercase">Artist Profile</span>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-bold tracking-tight truncate">黃翊庭</h1>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Yi-ting Huang</span>
+</div>
+</div>
+<!-- Role Pills / Tags -->
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface text-label-sm font-label-sm">多媒體設計系學生</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-primary text-label-sm font-label-sm">獨立動畫主製作</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-tertiary text-label-sm font-label-sm">2D 插畫創作者</span>
+</div>
+<!-- Quote Capsule -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/80 backdrop-blur-sm flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<p class="font-label-md text-label-md text-primary italic leading-relaxed">
+            「用厚塗質感與角色設計，賦予每一個停格靈魂與故事。」
+          </p>
+</div>
+<!-- Bio Paragraph -->
+<div class="flex flex-col gap-space-xs text-on-surface-variant font-body-md text-body-md leading-relaxed">
+<p>
+            熱愛用畫筆與影格說故事。在多媒體設計系學習期間，深入探索手繪插畫與數位動畫的跨界可能，擔任獨立動畫專案《積木 ToyBrick》及《嘿！這次是我覺得》的主製作，負責劇本編整、角色設定、分鏡繪製到關鍵影格動畫產出。
+          </p>
+<p class="text-on-surface">
+            堅信好的視覺不僅是技巧展現，更是引發觀眾共鳴的情感載體。擅長以厚塗油畫質感的層次雕琢光影，同時具備日式動漫的精準結構與歐美卡通的靈動角色動態。
+          </p>
+</div>
+<!-- Studio Milestone Chips -->
+<div class="grid grid-cols-2 gap-2 pt-space-xs">
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[16px]">movie</span>
+<span class="font-label-sm text-label-sm">代表主製作</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate">《積木 ToyBrick》</span>
+<span class="font-label-sm text-label-sm text-outline">原創短篇獨立動畫</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-tertiary">
+<span class="material-symbols-outlined text-[16px]">animation</span>
+<span class="font-label-sm text-label-sm">專案主編劇</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate">《嘿！這次是我覺得》</span>
+<span class="font-label-sm text-label-sm text-outline">動態分鏡與關鍵格</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visual Artwork Moodstrip (Richness) -->
+<section class="px-margin-mobile pb-space-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Atmospheric Palette</span>
+<span class="font-label-sm text-label-sm text-primary">2D Studio Stills</span>
+</div>
+<div class="grid grid-cols-3 gap-2 h-24">
+<div class="relative rounded-lg overflow-hidden bg-surface-container-high group">
+<img class="w-full h-full object-cover" data-alt="Impressionistic thick oil texture digital painting of a fantasy street lit by amber streetlamps at night, rich brush strokes, dark charcoal and deep golden tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDweC40YzJO2Js8EqhcLHVVS1PI8uNrsTFr8LBbHK6AH_oKNbvRt6wH8f_t40VOj8pHRVX8p6f93eVqiWwou9g5Z8gGfas3EZArio0xj_jsciWZZe5CQqw5RUtzhUtG6cFYgKzUsNRxyrFy8P4SP6oI-1_M91G9NZ9TH5I_6RwuExVPWJAn0F4-4DY1FlDkE1ETZv-394wJ753GU5zALrVJytqmlw5nTqKV1ON-GTI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent flex items-end p-1.5">
+<span class="font-label-sm text-label-sm text-on-surface truncate">厚塗光影</span>
+</div>
+</div>
+<div class="relative rounded-lg overflow-hidden bg-surface-container-high group">
+<img class="w-full h-full object-cover" data-alt="Dynamic anime style character turnaround storyboard sketches for ToyBrick project, clean keyframe pencil line art with digital amber tint highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlY4DUTEL9gB1pEBX4qto7kDdS4XAq8_2mXozTaSadqrwMgQI5Rl-EV2FGjL6-FH_gruT-e9VjSmrbh7QC8DRfEuuIdVP_8Td7vGWxB7MR9ZBLJn167ETI8KK-ADMZ5hqHTrFCGeZyIQR8FQyofLdQLcgrGjSy6hRVUJfsqcODwd05tQicwwN0RZNzg5cudtxs7EWWyeFA6OQpKk4gFAg3xiT0rTIPdLiNwC2i3Cw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent flex items-end p-1.5">
+<span class="font-label-sm text-label-sm text-on-surface truncate">分鏡動態</span>
+</div>
+</div>
+<div class="relative rounded-lg overflow-hidden bg-surface-container-high group">
+<img class="w-full h-full object-cover" data-alt="Stylized expressive animation keyframe frame from short film, a girl gazing at floating toy blocks, magical amber rim light, dark cinematic background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTnUuz4i2yo-dGgRLe5s56SY_-wW5neppWh_s0W4qq6nEe9YYzbi31SOc_RPdIwv1pUSIlupt0vAE7k98EW3HR4JlsO0wmA7IC8QrBBk1KeBQZl4OB0-0RQouWYCB4JdJCsN2fAMF3gKQTOtLy2emgYm_mMvwBVSsECjhE75rZrtulFtNw8rdeYXMh3IIsB2dSjf1XZiseK_wbOYEorbhDcW5QR0k8GJ-0YaWOqJw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent flex items-end p-1.5">
+<span class="font-label-sm text-label-sm text-on-surface truncate">角色演繹</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Tree & Tools Section -->
+<section class="px-margin-mobile pb-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">account_tree</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">專業技能與熟練度</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        融匯厚塗質感的靜態視覺，與精準掌握節奏律動的逐格動畫。
+      </p>
+</div>
+<!-- Core Competencies Bars -->
+<div class="flex flex-col gap-space-sm">
+<!-- Skill 1 -->
+<div class="p-3.5 rounded-xl bg-surface-container flex flex-col gap-2 shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[16px]">brush</span>
+</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">插畫繪製</span>
+<span class="font-label-sm text-label-sm text-outline">厚塗油畫風格 ｜ 日式動漫 ｜ 歐美卡通人物</span>
+</div>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">95%</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-2 rounded-full bg-surface-container-lowest overflow-hidden">
+<div class="h-full rounded-full bg-gradient-to-r from-primary-container to-primary transition-all duration-700" style="width: 95%;"></div>
+</div>
+</div>
+<!-- Skill 2 -->
+<div class="p-3.5 rounded-xl bg-surface-container flex flex-col gap-2 shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[16px]">movie_edit</span>
+</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">2D 動畫製作</span>
+<span class="font-label-sm text-label-sm text-outline">逐格動作 ｜ 節奏控制 ｜ 角色動態表演</span>
+</div>
+</div>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">90%</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-2 rounded-full bg-surface-container-lowest overflow-hidden">
+<div class="h-full rounded-full bg-gradient-to-r from-secondary-container to-secondary transition-all duration-700" style="width: 90%;"></div>
+</div>
+</div>
+<!-- Skill 3 -->
+<div class="p-3.5 rounded-xl bg-surface-container flex flex-col gap-2 shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[16px]">art_track</span>
+</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">分鏡腳本設計</span>
+<span class="font-label-sm text-label-sm text-outline">鏡頭語言 ｜ 動態分鏡 Animatic ｜ 視覺節奏</span>
+</div>
+</div>
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold">92%</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-2 rounded-full bg-surface-container-lowest overflow-hidden">
+<div class="h-full rounded-full bg-gradient-to-r from-tertiary-container to-tertiary transition-all duration-700" style="width: 92%;"></div>
+</div>
+</div>
+</div>
+<!-- Mastered Tools Deck -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary tracking-wider uppercase font-semibold">Mastered Tools</span>
+<span class="font-label-sm text-label-sm text-outline">軟體工具庫</span>
+</div>
+<div class="grid grid-cols-2 gap-2.5">
+<!-- CSP (Core) -->
+<div class="p-3 rounded-lg bg-surface-container flex items-center gap-2.5 shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-label-sm shrink-0">
+            CSP
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-medium truncate">Clip Studio</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+              核心主力
+            </span>
+</div>
+</div>
+<!-- Adobe Animate (Core) -->
+<div class="p-3 rounded-lg bg-surface-container flex items-center gap-2.5 shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-label-sm shrink-0">
+            AN
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-medium truncate">Adobe Animate</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+              核心主力
+            </span>
+</div>
+</div>
+<!-- Photoshop -->
+<div class="p-3 rounded-lg bg-surface-container flex items-center gap-2.5 shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center font-bold text-label-sm shrink-0">
+            PS
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-medium truncate">Photoshop</span>
+<span class="font-label-sm text-label-sm text-outline">角色厚塗與紋理</span>
+</div>
+</div>
+<!-- After Effects -->
+<div class="p-3 rounded-lg bg-surface-container flex items-center gap-2.5 shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center font-bold text-label-sm shrink-0">
+            AE
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-medium truncate">After Effects</span>
+<span class="font-label-sm text-label-sm text-outline">後期光效合成</span>
+</div>
+</div>
+<!-- Storyboard Pro -->
+<div class="p-3 rounded-lg bg-surface-container col-span-2 flex items-center gap-2.5 shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-tertiary flex items-center justify-center font-bold text-label-sm shrink-0">
+            SBP
+          </div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-medium">Storyboard Pro</span>
+<span class="font-label-sm text-label-sm text-outline">鏡頭語言與音軌配對</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact & Collaboration Section -->
+<section class="px-margin-mobile pb-space-lg flex flex-col gap-space-md" id="contact-section">
+<!-- Header Block -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high w-fit">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">目前開放新專案委託與工作機會</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-bold">
+        一起創作有趣的故事吧
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        無論是動畫短片製作、原創插畫商業授權、動態分鏡規劃或學校畢業專案交流，歡迎隨時來信。
+      </p>
+</div>
+<!-- Email Quick Capsule with Copy -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-sm shadow-md">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Direct Email</span>
+<div class="flex items-center justify-between gap-2 p-2.5 rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0">alternate_email</span>
+<span class="font-body-md text-body-md text-on-surface font-medium truncate" id="contact-email-text">ab50713845@gmail.com</span>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<button aria-label="複製電子信箱" class="px-3 h-9 rounded-md bg-surface-container-high text-primary hover:bg-surface-bright active:scale-95 transition-all flex items-center gap-1 font-label-sm text-label-sm" id="copy-email-btn" onclick="copyContactEmail()">
+<span class="material-symbols-outlined text-[16px]" id="copy-icon">content_copy</span>
+<span id="copy-label">複製</span>
+</button>
+<a aria-label="寄送郵件" class="w-9 h-9 rounded-md bg-primary-container text-on-primary-container flex items-center justify-center hover:bg-secondary-container transition-colors" href="mailto:ab50713845@gmail.com?subject=【合作邀約】來自作品集訪客">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</a>
+</div>
+</div>
+<p class="font-label-sm text-label-sm text-primary opacity-0 transition-opacity text-center" id="copy-toast">已複製至剪貼簿！期待您的來信。</p>
+</div>
+<!-- Quick Collaboration Form -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-md shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">edit_note</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">快速專案聯絡表單</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Quick Dispatch</span>
+</div>
+<form class="flex flex-col gap-space-sm" id="portfolio-contact-form" onsubmit="handleFormSubmit(event)">
+<!-- Name Input -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant flex items-center justify-between" for="contact-name">
+<span>您的稱呼 / 團隊名稱</span>
+<span class="text-primary">*必填</span>
+</label>
+<input class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none focus:bg-surface-container-high transition-colors" id="contact-name" placeholder="例如：林導演 / 樂木設計" required="" type="text"/>
+</div>
+<!-- Email Input -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant flex items-center justify-between" for="contact-sender-email">
+<span>電子信箱 (Email)</span>
+<span class="text-primary">*必填</span>
+</label>
+<input class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none focus:bg-surface-container-high transition-colors" id="contact-sender-email" placeholder="your.name@example.com" required="" type="email"/>
+</div>
+<!-- Project Type Radio Pills -->
+<div class="flex flex-col gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant">專案合作類型</span>
+<div class="grid grid-cols-2 gap-2" id="project-type-group">
+<button class="project-pill active px-3 py-2.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md text-center transition-all flex items-center justify-center gap-1.5 shadow-sm" data-type="動畫專案" onclick="selectType(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">movie_creation</span>
+<span>動畫專案</span>
+</button>
+<button class="project-pill px-3 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md text-center hover:bg-surface-container-high transition-all flex items-center justify-center gap-1.5" data-type="商業插畫" onclick="selectType(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">palette</span>
+<span>商業插畫</span>
+</button>
+<button class="project-pill px-3 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md text-center hover:bg-surface-container-high transition-all flex items-center justify-center gap-1.5" data-type="委託合作" onclick="selectType(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">handshake</span>
+<span>委託合作</span>
+</button>
+<button class="project-pill px-3 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md text-center hover:bg-surface-container-high transition-all flex items-center justify-center gap-1.5" data-type="學校交流" onclick="selectType(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">school</span>
+<span>學校交流</span>
+</button>
+</div>
+<input id="selected-project-type" type="hidden" value="動畫專案"/>
+</div>
+<!-- Message Field -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant flex items-center justify-between" for="contact-message">
+<span>合作想法或需求說明</span>
+<span class="text-primary">*必填</span>
+</label>
+<textarea class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none focus:bg-surface-container-high transition-colors resize-none" id="contact-message" placeholder="請簡要描述您的專案概念、時程預估或期望的視覺風格..." required="" rows="4"></textarea>
+</div>
+<!-- Submit Button -->
+<button class="mt-space-xs w-full h-12 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold flex items-center justify-center gap-2 hover:bg-secondary-container active:scale-[0.98] transition-all shadow-md" id="submit-form-btn" type="submit">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>發送合作需求</span>
+</button>
+<!-- Feedback Alert -->
+<div class="hidden p-3 rounded-lg bg-surface-container-high flex items-center gap-2.5" id="form-success-banner">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold">需求已成功轉寄！</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">已為您開啟郵件客戶端，翊庭將盡快回覆。</span>
+</div>
+</div>
+</form>
+</div>
+<!-- External Portals & Social Hub -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<span class="font-label-sm text-label-sm text-outline tracking-wider uppercase text-center">Portfolio Channels & Social</span>
+<div class="grid grid-cols-4 gap-2">
+<a class="p-3 rounded-xl bg-surface-container flex flex-col items-center justify-center gap-1.5 text-on-surface-variant hover:text-primary hover:bg-surface-container-high active:scale-95 transition-all" href="https://behance.net" rel="noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[22px]">palette</span>
+<span class="font-label-sm text-label-sm">Behance</span>
+</a>
+<a class="p-3 rounded-xl bg-surface-container flex flex-col items-center justify-center gap-1.5 text-on-surface-variant hover:text-primary hover:bg-surface-container-high active:scale-95 transition-all" href="https://instagram.com" rel="noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[22px]">photo_camera</span>
+<span class="font-label-sm text-label-sm">Instagram</span>
+</a>
+<a class="p-3 rounded-xl bg-surface-container flex flex-col items-center justify-center gap-1.5 text-on-surface-variant hover:text-primary hover:bg-surface-container-high active:scale-95 transition-all" href="https://youtube.com" rel="noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[22px]">smart_display</span>
+<span class="font-label-sm text-label-sm">YouTube</span>
+</a>
+<a class="p-3 rounded-xl bg-surface-container flex flex-col items-center justify-center gap-1.5 text-on-surface-variant hover:text-primary hover:bg-surface-container-high active:scale-95 transition-all" href="https://artstation.com" rel="noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[22px]">draw</span>
+<span class="font-label-sm text-label-sm">ArtStation</span>
+</a>
+</div>
+</div>
+<!-- Spec 5.4 Architecture Notice Pill -->
+<div class="p-3 rounded-xl bg-surface-container-lowest flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Vite + React 18/19 現代化架構</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-primary font-label-sm text-label-sm">Render Deploy</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline truncate">支援高畫質影格預載、流暢分鏡切換與極速效能渲染。</span>
+</div>
+</div>
+</section>
+<!-- Interactive Scripts for Tab Switching, Toast, and Mailto -->
+<script>
+    function copyContactEmail() {
+      const email = 'ab50713845@gmail.com';
+      navigator.clipboard.writeText(email).then(() => {
+        const toast = document.getElementById('copy-toast');
+        const copyLabel = document.getElementById('copy-label');
+        const copyIcon = document.getElementById('copy-icon');
+        if (toast) {
+          toast.classList.remove('opacity-0');
+          setTimeout(() => toast.classList.add('opacity-0'), 2500);
+        }
+        if (copyLabel) copyLabel.textContent = '已複製';
+        if (copyIcon) copyIcon.textContent = 'check';
+        setTimeout(() => {
+          if (copyLabel) copyLabel.textContent = '複製';
+          if (copyIcon) copyIcon.textContent = 'content_copy';
+        }, 2200);
+      }).catch(err => {
+        console.error('Copy failed', err);
+      });
+    }
+
+    function selectType(button) {
+      const allPills = document.querySelectorAll('.project-pill');
+      allPills.forEach(pill => {
+        pill.classList.remove('bg-primary-container', 'text-on-primary-container', 'shadow-sm');
+        pill.classList.add('bg-surface-container-lowest', 'text-on-surface');
+      });
+      button.classList.remove('bg-surface-container-lowest', 'text-on-surface');
+      button.classList.add('bg-primary-container', 'text-on-primary-container', 'shadow-sm');
+
+      const hiddenInput = document.getElementById('selected-project-type');
+      if (hiddenInput) {
+        hiddenInput.value = button.getAttribute('data-type');
+      }
+    }
+
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      const name = document.getElementById('contact-name').value;
+      const senderEmail = document.getElementById('contact-sender-email').value;
+      const type = document.getElementById('selected-project-type').value;
+      const message = document.getElementById('contact-message').value;
+
+      const subject = encodeURIComponent(`【合作需求 - ${type}】來自 ${name}`);
+      const body = encodeURIComponent(
+        `您好，翊庭：\n\n我是 ${name} (${senderEmail})。\n對您的專案合作有濃厚興趣！\n\n【合作類型】: ${type}\n【詳細需求】:\n${message}\n\n期待您的回覆！`
+      );
+
+      const banner = document.getElementById('form-success-banner');
+      if (banner) {
+        banner.classList.remove('hidden');
+      }
+
+      // Open user mail client with prefilled context
+      window.location.href = `mailto:ab50713845@gmail.com?subject=${subject}&body=${body}`;
+    }
+  </script>
+</div><footer class="w-full bg-surface-container-lowest mt-space-xl pt-space-lg pb-24 px-margin-mobile flex flex-col gap-space-md"><div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-high w-fit"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Open for Freelance & Animation</span></div><div class="flex flex-col gap-space-xs"><span class="font-label-sm text-label-sm text-outline">Direct Collaboration</span><div class="flex items-center gap-2"><span class="font-body-sm text-body-sm text-on-surface truncate">ab50713845@gmail.com</span><button aria-label="Copy Email" class="w-11 h-11 flex items-center justify-center rounded-lg bg-surface-container hover:bg-surface-container-high text-primary active:scale-95 transition-all" onclick="navigator.clipboard.writeText('ab50713845@gmail.com')"><span class="material-symbols-outlined text-[18px]">content_copy</span></button></div></div><div class="flex items-center gap-space-sm pt-space-xs"><a aria-label="Behance" class="w-11 h-11 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:text-primary transition-colors" href="https://behance.net" rel="noreferrer" target="_blank"><span class="material-symbols-outlined text-[20px]">palette</span></a><a aria-label="Instagram" class="w-11 h-11 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:text-primary transition-colors" href="https://instagram.com" rel="noreferrer" target="_blank"><span class="material-symbols-outlined text-[20px]">photo_camera</span></a><a aria-label="YouTube" class="w-11 h-11 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:text-primary transition-colors" href="https://youtube.com" rel="noreferrer" target="_blank"><span class="material-symbols-outlined text-[20px]">smart_display</span></a><button aria-label="Back to top" class="ml-auto w-11 h-11 rounded-full bg-surface-container-high hover:bg-surface-bright flex items-center justify-center text-primary shadow-[0_2px_12px_rgba(245,158,11,0.15)] active:scale-95 transition-all" onclick="window.scrollTo({top:0,behavior:'smooth'})"><span class="material-symbols-outlined text-[20px]">arrow_upward</span></button></div><div class="pt-space-sm text-center"><p class="font-label-sm text-label-sm text-outline">© 2024 Yi-ting Portfolio. All rights reserved.</p></div></footer></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_-2px_16px_rgba(0,0,0,0.5)]" data-active-classes="text-primary-container font-semibold"><div class="flex justify-around items-center h-16 px-space-xs max-w-md mx-auto"><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="showcase" href="#"><span class="material-symbols-outlined text-[22px]">auto_awesome</span><span class="font-label-sm text-label-sm">精選作品</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="animation-reels" href="#"><span class="material-symbols-outlined text-[22px]">movie_creation</span><span class="font-label-sm text-label-sm">動畫短片</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="illustrations" href="#"><span class="material-symbols-outlined text-[22px]">draw</span><span class="font-label-sm text-label-sm">插畫草稿</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] transition-colors text-primary-container font-semibold" data-path="about-artist" href="#"><span class="material-symbols-outlined text-[22px]">account_circle</span><span class="font-label-sm text-label-sm">關於藝術家</span></a></div></nav></body></html>

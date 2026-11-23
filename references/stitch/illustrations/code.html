@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="zh-TW"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#131313;color:#e5e2e1;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-container-low": "#1c1b1b", "secondary-container": "#d97722", "on-error": "#690005", "outline-variant": "#534434", "surface": "#131313", "background": "#131313", "on-tertiary": "#4d2600", "on-tertiary-fixed-variant": "#6e3900", "surface-variant": "#353534", "on-primary": "#472a00", "secondary-fixed": "#ffdcc5", "on-secondary-fixed-variant": "#713700", "on-secondary-container": "#451f00", "inverse-primary": "#855300", "on-background": "#e5e2e1", "tertiary-container": "#ff9837", "primary-container": "#f59e0b", "on-secondary-fixed": "#301400", "on-error-container": "#ffdad6", "on-primary-fixed": "#2a1700", "primary-fixed-dim": "#ffb95f", "surface-tint": "#ffb95f", "inverse-on-surface": "#313030", "surface-bright": "#393939", "primary-fixed": "#ffddb8", "on-primary-container": "#613b00", "outline": "#a08e7a", "on-secondary": "#4f2500", "surface-container": "#201f1f", "error": "#ffb4ab", "inverse-surface": "#e5e2e1", "tertiary-fixed": "#ffdcc3", "error-container": "#93000a", "secondary-fixed-dim": "#ffb783", "surface-container-lowest": "#0e0e0e", "surface-container-highest": "#353534", "surface-dim": "#131313", "on-tertiary-container": "#6a3700", "tertiary-fixed-dim": "#ffb77d", "on-surface": "#e5e2e1", "tertiary": "#ffc08e", "primary": "#ffc174", "surface-container-high": "#2a2a2a", "on-primary-fixed-variant": "#653e00", "on-tertiary-fixed": "#2f1500", "on-surface-variant": "#d8c3ad", "secondary": "#ffb783" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "gutter-mobile": "1rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "margin-mobile": "1.25rem", "space-md": "1rem", "margin": "3rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "gutter": "1.5rem" }, fontFamily: { "label-sm": ["Inter"], "headline-md": ["Inter"], "body-md": ["Inter"], "display-hero-mobile": ["Inter"], "body-sm": ["Inter"], "label-md": ["Inter"], "headline-sm": ["Inter"], "headline-lg": ["Inter"], "body-lg": ["Inter"], "display-hero": ["Inter"], "headline-lg-mobile": ["Inter"] }, fontSize: { "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.03em", "fontWeight": "500" }], "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "600" }], "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_12px_rgba(0,0,0,0.4)]"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Yi-ting Brand Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/ALJJyrCkae46lxkDIyjKEGba-_HSc1wyOo8qCLBq4PwuZem5GtCvLPFuo9XkmWoxoJrnrVWx5rQkc89YnCRpHh4yfZhhnBUZUgdR5RDp3BaZdBwDT9cl-JdnbU7LtVp2whKqO7k28N1hYFZW3rDlNCnfX8m5YPp3HVMEOnCOC7PenaP0PhPkoQH6mJe8QAyNQ8cP5lkUT6nWK_LFdpkorfX4LlRG7HteOjTwmXJPbQ71lFUQ"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight truncate">Yi-ting</span><span class="font-label-sm text-label-sm text-outline px-1.5 py-0.5 rounded bg-surface-container-high hidden sm:inline">黃翊庭</span></div><span class="font-label-sm text-label-sm text-primary tracking-wide truncate">Illustrations</span></div></div><div class="flex items-center gap-space-sm shrink-0"><a class="h-11 px-3.5 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md flex items-center justify-center gap-1.5 hover:bg-secondary-container transition-colors" data-path="contact" href="#"><span class="material-symbols-outlined text-[18px]">mail</span><span class="whitespace-nowrap">聯絡</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 bg-surface min-h-[calc(100vh-5rem)]"><div class="flex flex-col w-full pb-12">
+<!-- Interactive Canvas Header & Filter Hub -->
+<section class="px-margin-mobile pt-space-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[16px]">palette</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Visual Arts & Concept</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-semibold tracking-tight mt-0.5">2D 插畫與角色設計</h2>
+</div>
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span>6 件精選作品</span>
+</div>
+</div>
+<!-- Artist Quick Quote / Mini Narrative -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-start gap-space-sm shadow-sm relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-primary/5 pointer-events-none blur-xl"></div>
+<span class="material-symbols-outlined text-primary text-[24px] shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic leading-relaxed">
+        「用光影雕琢呼吸的厚度，藉筆觸留存角色的靈魂脈動。每一幅畫稿都是未完電影的第一個分鏡。」
+      </p>
+</div>
+<!-- Category Filter Pill Bar -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none -mx-margin-mobile px-margin-mobile">
+<button class="filter-btn h-9 px-4 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-medium shrink-0 flex items-center gap-1.5 shadow-sm transition-all active:scale-95" data-filter="all">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary-container"></span>
+        全部 (All)
+      </button>
+<button class="filter-btn h-9 px-3.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md shrink-0 flex items-center gap-1.5 transition-all active:scale-95" data-filter="impasto">
+        厚塗油畫風
+      </button>
+<button class="filter-btn h-9 px-3.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md shrink-0 flex items-center gap-1.5 transition-all active:scale-95" data-filter="anime">
+        日式動漫
+      </button>
+<button class="filter-btn h-9 px-3.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md shrink-0 flex items-center gap-1.5 transition-all active:scale-95" data-filter="cartoon">
+        歐美卡通
+      </button>
+<button class="filter-btn h-9 px-3.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md shrink-0 flex items-center gap-1.5 transition-all active:scale-95" data-filter="concept">
+        概念美術
+      </button>
+</div>
+</section>
+<!-- Illustration Portfolio Stream (Asymmetric Editorial Cards) -->
+<section class="px-margin-mobile mt-space-lg flex flex-col gap-space-lg" id="gallery-container">
+<!-- Item A: 荒原旅人 (Featured Hero Card / Impasto) -->
+<article class="gallery-card flex flex-col rounded-xl bg-surface-container-low overflow-hidden shadow-md group transition-all duration-300" data-category="impasto">
+<div class="relative w-full aspect-[4/3] bg-surface-container-high overflow-hidden cursor-pointer" onclick="openModal('modal-a')">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Cinematic 2D digital painting with heavy impasto oil texture, a lone nomadic traveler wearing a weather-worn hooded wool cloak trekking across a vast cracked desert at twilight, dramatic golden sunset backlighting casting long shadows, visible gritty textured brushstrokes, warm amber and obsidian shadow palette, high painterly detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2ZBvuTn5jNvm78X3ZRPOv4etS4svLqixnuDl8fEwmEPq1GxOEL8VRz_k5Hf6TAK90aSYdGyNqWBzl6exFDc0NWmI0YTYw9hiDW6c3Hl68FJJdeG-yGZtzBOBY22A8lGReE-_2xQR6yxo2pnnNN73azS1SnGQtrjsb0e6lgyVc-WsxiCkT-TzEExk_y1-f7HLlWlmiYjlfg37vzim7BT3cxAOAN_oP6vsTasNWAsc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-85"></div>
+<div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-primary font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+          厚塗油畫風 • 核心代表作
+        </div>
+<button aria-label="放大檢視" class="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-lg active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[20px]">zoom_in</span>
+</button>
+<div class="absolute bottom-3 left-3 right-14 flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">《荒原旅人》</span>
+<span class="font-label-sm text-label-sm text-outline px-1.5 py-0.5 rounded bg-surface-container-high/80 shrink-0">48h</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm">
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+          強調自然光影在粗糙布料與乾燥岩層上的漫反射。運用自訂厚塗扁筆刷模擬實體油彩推疊感，捕捉黃昏時分旅人孤獨而堅毅的靈魂氛圍。
+        </p>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-outline">主要色票</span>
+<div class="flex items-center -space-x-1">
+<span class="w-4 h-4 rounded-full bg-[#f59e0b] shadow-sm"></span>
+<span class="w-4 h-4 rounded-full bg-[#b45309] shadow-sm"></span>
+<span class="w-4 h-4 rounded-full bg-[#3f2e1e] shadow-sm"></span>
+<span class="w-4 h-4 rounded-full bg-[#1c1917] shadow-sm"></span>
+</div>
+</div>
+<button class="text-primary hover:text-secondary font-label-md text-label-md flex items-center gap-0.5 transition-colors" onclick="openModal('modal-a')">
+<span>探索設定</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Item B: 雨後的便利商店 (Anime Atmosphere) -->
+<article class="gallery-card flex flex-col rounded-xl bg-surface-container-low overflow-hidden shadow-md group transition-all duration-300" data-category="anime">
+<div class="relative w-full aspect-[16/10] bg-surface-container-high overflow-hidden cursor-pointer" onclick="openModal('modal-b')">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Japanese anime style illustration of an illuminated Tokyo convenience store glass exterior at dusk right after heavy rain, shimmering wet asphalt puddles reflecting bright fluorescent signs and golden warm interior lights, a high school girl holding a transparent umbrella looking at the city skyline, ethereal vapor mist, emotive anime aesthetic with crisp clean lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbILMInJSIvkxxLEpDBQ1Q4-Zs1TMC7AtF6E9QfUUyig5fbocJLIlOUbURwu0yhF7w3nr4-RoXh_69CaVoJepf8N92HR9ri1RmM2rfMI4L9jJAJAY9qd20Fc1vZyAQKD2X-SXGZSAPqTHwJgqsahqMMhF8QroSWyJTEcjZL1bzFqvb_ER_CeN6YUaosi-Vo6vU4iaRfiY5EPIR0Mn2Qn-PkAAjJ1o36zHl_-bpacw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-85"></div>
+<div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-secondary font-label-sm text-label-sm">
+          日式動漫 • 氛圍敘事
+        </div>
+<button aria-label="放大檢視" class="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-surface-container-high/90 text-on-surface flex items-center justify-center shadow-lg active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[20px]">zoom_in</span>
+</button>
+<div class="absolute bottom-3 left-3 right-14 flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">《雨後的便利商店》</span>
+<span class="font-label-sm text-label-sm text-outline px-1.5 py-0.5 rounded bg-surface-container-high/80 shrink-0">32h</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm">
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+          注重潮濕透明感與微光暈染。透過 Clip Studio Paint 的漸變映對層與色散微調，呈現雨水氣息與都市夜色交融的靜謐少年感傷。
+        </p>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-outline">主要色票</span>
+<div class="flex items-center -space-x-1">
+<span class="w-4 h-4 rounded-full bg-[#38bdf8] shadow-sm"></span>
+<span class="w-4 h-4 rounded-full bg-[#fbbf24] shadow-sm"></span>
+<span class="w-4 h-4 rounded-full bg-[#312e81] shadow-sm"></span>
+<span class="w-4 h-4 rounded-full bg-[#0f172a] shadow-sm"></span>
+</div>
+</div>
+<button class="text-primary hover:text-secondary font-label-md text-label-md flex items-center gap-0.5 transition-colors" onclick="openModal('modal-b')">
+<span>探索設定</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Item C: 怪盜露卡與機械狗 (Western Cartoon Character Sheet) -->
+<article class="gallery-card flex flex-col rounded-xl bg-surface-container-low overflow-hidden shadow-md group transition-all duration-300" data-category="cartoon">
+<div class="relative w-full aspect-[4/3] bg-surface-container-high overflow-hidden cursor-pointer" onclick="openModal('modal-c')">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Stylized Western cartoon character design sheet featuring a charismatic female phantom thief named Luca with exaggerated mischievous facial expressions, wearing an asymmetrical sleek trench coat, accompanied by a small brass steampunk robotic dog companion with glowing monocle eyes, energetic dynamic line art, warm amber rim light, animation studio production turnaround" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVLOsLlLr-yhF5htkgdozWVBbB7SajzuvAOFrLbi3q9hO4dpjK47HtM99xJwLm9LaHo0gTbTG8dX2b2o9Ba8O12yFAqrorJaBW4zf5ImiisY889NL7oUj3pDLPR6W5rWDzPv2Os99K--IKdU_f25Jp6QaWJrGCTs_8nVGVj5M24nQa1zBx9ib31rr8eOk_Dqf9UWH2CFXt8wukBV0jWsDalfJIZeg4J2PVrPuADKQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-85"></div>
+<div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-tertiary font-label-sm text-label-sm">
+          歐美卡通 • 角色設定
+        </div>
+<button aria-label="放大檢視" class="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-surface-container-high/90 text-on-surface flex items-center justify-center shadow-lg active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[20px]">zoom_in</span>
+</button>
+<div class="absolute bottom-3 left-3 right-14 flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">《怪盜露卡與機械狗》</span>
+<span class="font-label-sm text-label-sm text-outline px-1.5 py-0.5 rounded bg-surface-container-high/80 shrink-0">26h</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm">
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+          大膽剪影與高張力肢體語言。運用向量向量圖層控制粗細線條，塑造俐落節奏感，包含 4 組誇張生動的喜怒哀樂面部表情擴充。
+        </p>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-outline">主要色票</span>
+<div class="flex items-center -space-x-1">
+<span class="w-4 h-4 rounded-full bg-[#f97316] shadow-sm"></span>
+<span class="w-4 h-4 rounded-full bg-[#eab308] shadow-sm"></span>
+<span class="w-4 h-4 rounded-full bg-[#475569] shadow-sm"></span>
+<span class="w-4 h-4 rounded-full bg-[#18181b] shadow-sm"></span>
+</div>
+</div>
+<button class="text-primary hover:text-secondary font-label-md text-label-md flex items-center gap-0.5 transition-colors" onclick="openModal('modal-c')">
+<span>探索設定</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Item D: 森林精靈的魔藥鋪 (Concept Art / High Precision Props) -->
+<article class="gallery-card flex flex-col rounded-xl bg-surface-container-low overflow-hidden shadow-md group transition-all duration-300" data-category="concept">
+<div class="relative w-full aspect-[16/10] bg-surface-container-high overflow-hidden cursor-pointer" onclick="openModal('modal-d')">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="High precision fantasy concept art of an enchanting forest fairy potion apothecary inside a hollow ancient glowing moss-covered oak tree, detailed antique brass distillation retorts, sparkling amber liquid in glass phials, hanging dried magical herbs, intricate woodwork props and labeled botanical jars, cozy glowing warm lantern atmosphere, dark storybook realism" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG2--CEdhtOyTkdcy_kRioAOX5CR03cPd3WhU8aOfYBHMdWQg1UqZBouTyvguitOwGftrV8egkLA4QPPt6UbOf4B_lfJpxq7gpxyQXKR1JWxBmSmOwVTbEmZ0ynZSx7M5XfkQk87d2QSu0TgzpCN4uzZwHU9FOTPPEMG9S9Q9_4G4UhlrMzU9cAmKBv3aVaZnbYRvVj-4YEHwGnJWwedMZU-ZXt-ibV0bHwSaWGgY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-85"></div>
+<div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-primary font-label-sm text-label-sm">
+          概念美術 • 場景與道具
+        </div>
+<button aria-label="放大檢視" class="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-surface-container-high/90 text-on-surface flex items-center justify-center shadow-lg active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[20px]">zoom_in</span>
+</button>
+<div class="absolute bottom-3 left-3 right-14 flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">《森林精靈的魔藥鋪》</span>
+<span class="font-label-sm text-label-sm text-outline px-1.5 py-0.5 rounded bg-surface-container-high/80 shrink-0">54h</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm">
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+          深度構建世界觀架構。詳盡拆解 12 款玻璃藥劑瓶身紋樣與蒸餾機械構造，著重金屬氧化光澤與液體透光度考究。
+        </p>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-outline">主要色票</span>
+<div class="flex items-center -space-x-1">
+<span class="w-4 h-4 rounded-full bg-[#10b981] shadow-sm"></span>
+<span class="w-4 h-4 rounded-full bg-[#f59e0b] shadow-sm"></span>
+<span class="w-4 h-4 rounded-full bg-[#78350f] shadow-sm"></span>
+<span class="w-4 h-4 rounded-full bg-[#064e3b] shadow-sm"></span>
+</div>
+</div>
+<button class="text-primary hover:text-secondary font-label-md text-label-md flex items-center gap-0.5 transition-colors" onclick="openModal('modal-d')">
+<span>探索設定</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Item E & F 2-Column Split: 深海之歌 & 都會疾走 -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Item E: 深海之歌 (Concept Art / Chromatic) -->
+<article class="gallery-card flex flex-col rounded-xl bg-surface-container-low overflow-hidden shadow-md group transition-all duration-300" data-category="concept">
+<div class="relative w-full aspect-[4/3] bg-surface-container-high overflow-hidden cursor-pointer" onclick="openModal('modal-e')">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Surreal deep sea fantasy illustration of a colossal translucent bioluminescent whale gliding beneath pitch black ocean water, surrounded by clusters of glowing cyan and warm amber jellyfish, tiny submerged ancient ruins in the distance, dramatic chiaroscuro contrast with dreamy glowing particles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDhV4uWhSfwi6pirgAIGs64XNR9hfFqWSL7RfAdsX13Xg_gYZjXdcmf3vsYoZCo_aRZjUNVAcnQg4toU_Q0uo2d1o79VqIz2xWt3JcngpkPq9k7vhJTkvygYmJJxQlhRjX8ey0tQhxDGoRVjXQTntB_QZJMh9A1b4Fe7jeAMfgFFtOcKOovUJm3qUNBKxaxOOTb_AXYfdklG8BFxpgG4nlxuB_8NYet5gUZaFj_mU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-85"></div>
+<div class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-secondary font-label-sm text-label-sm">
+            概念美術
+          </div>
+<button aria-label="放大" class="absolute bottom-2.5 right-2.5 w-8 h-8 rounded-full bg-surface-container-high/90 text-on-surface flex items-center justify-center shadow">
+<span class="material-symbols-outlined text-[18px]">zoom_in</span>
+</button>
+<div class="absolute bottom-2.5 left-2.5 right-12">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate block">《深海之歌》</span>
+</div>
+</div>
+<div class="p-space-sm flex flex-col gap-1.5">
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+            色彩光頻實驗作品。探索在近乎全黑的暗部背景中，如何僅憑微弱生物發光建立空間層次。
+          </p>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm pt-1">
+<span>耗時: 20h</span>
+<span class="text-primary">檢視大圖</span>
+</div>
+</div>
+</article>
+<!-- Item F: 都會疾走 (Cartoon / Action Silhouette) -->
+<article class="gallery-card flex flex-col rounded-xl bg-surface-container-low overflow-hidden shadow-md group transition-all duration-300" data-category="cartoon">
+<div class="relative w-full aspect-[4/3] bg-surface-container-high overflow-hidden cursor-pointer" onclick="openModal('modal-f')">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Dynamic graphic action sketch illustration of a futuristic courier leaping across neon-lit skyscrapers in high speed parkour, sharp exaggerated perspective dynamic foreshortening, kinetic speed lines, cyberpunk amber and charcoal silhouette style, energetic concept drawing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADOMIsTkhlQzRZ8syHMiZMIyI32YdPuYPm4MclpRWB4_uM7oralYdzSDf-OKkVuy6SDe4vIsxfHATYy_WAZ77BabFaViPlDhrCQf6qzSuutxvLDy8lkWH3LaOq5S__nhonb33TEpG60XDCAJlgGTPpGW3y6Hy4EmOCQq2t3Ima_aprJI27D-8tdzUR9bQe0WS5Tv-4yOZhYkTKrMi_E640CKa08RxGmodgLcu5Qxw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-85"></div>
+<div class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-tertiary font-label-sm text-label-sm">
+            歐美卡通
+          </div>
+<button aria-label="放大" class="absolute bottom-2.5 right-2.5 w-8 h-8 rounded-full bg-surface-container-high/90 text-on-surface flex items-center justify-center shadow">
+<span class="material-symbols-outlined text-[18px]">zoom_in</span>
+</button>
+<div class="absolute bottom-2.5 left-2.5 right-12">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate block">《都會疾走》</span>
+</div>
+</div>
+<div class="p-space-sm flex flex-col gap-1.5">
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+            人體骨骼與運動張力速寫。極限透視俯瞰角度，捕捉角色空中騰躍時肌肉張力與外套飄動瞬間。
+          </p>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm pt-1">
+<span>耗時: 16h</span>
+<span class="text-primary">檢視大圖</span>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Creative Workflow & Software Mastery (Bento Card Set) -->
+<section class="px-margin-mobile mt-space-xl flex flex-col gap-space-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Workflow & Technique</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">創作特色與繪畫工具解析</h3>
+</div>
+<!-- Software Deep Dive Card: Clip Studio Paint -->
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">brush</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium">Clip Studio Paint EX</span>
+<span class="font-label-sm text-label-sm text-outline">主要繪圖與角色設計工作站</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary-container/20 text-primary font-label-sm text-label-sm">專業工作流</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-2 mt-1">
+<div class="p-2.5 rounded-lg bg-surface-container flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[16px]">texture</span>
+<span class="font-label-md text-label-md font-medium">自訂油畫筆刷</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">模擬實體壓克力與油彩刮刀混合率，賦予畫面顆粒阻尼感。</p>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px]">gesture</span>
+<span class="font-label-md text-label-md font-medium">向量描線圖層</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">任意縮放無損耗，搭配交點擦除快速梳理高密度的角色輪廓線。</p>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-tertiary">
+<span class="material-symbols-outlined text-[16px]">layers</span>
+<span class="font-label-md text-label-md font-medium">色相分層管理</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">嚴謹的剪裁遮罩與光源圖層分離，便於快速輸出動畫賽璐珞設定檔。</p>
+</div>
+</div>
+</div>
+<!-- 3 Signature Style Badges -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+<div class="p-space-md rounded-xl bg-surface-container-high flex flex-col gap-1.5">
+<div class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">light_mode</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium">強烈光影對比</span>
+<span class="font-label-sm text-label-sm text-outline">Dramatic Lighting</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+          偏愛高反差的明暗交界線與逆光輪廓光，使扁平構圖瞬間展現電影級空間深度。
+        </p>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-high flex flex-col gap-1.5">
+<div class="w-8 h-8 rounded-full bg-secondary/10 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">auto_stories</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium">故事感構圖</span>
+<span class="font-label-sm text-label-sm text-outline">Narrative Composition</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+          視線引導線與道具暗示細節，讓觀眾一眼即能聯想畫面發生前與即將展開的情節。
+        </p>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-high flex flex-col gap-1.5">
+<div class="w-8 h-8 rounded-full bg-tertiary/10 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">draw</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium">多變筆觸質地</span>
+<span class="font-label-sm text-label-sm text-outline">Expressive Textures</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+          從俐落平塗向量到鬆弛厚塗堆疊，依專案氛圍精確調配筆刷阻尼與邊緣清晰度。
+        </p>
+</div>
+</div>
+</section>
+<!-- Interactive Project Lightbox Modals (6 Details) -->
+<!-- Modal A: 荒原旅人 -->
+<div class="fixed inset-0 z-50 hidden bg-surface-container-lowest/90 backdrop-blur-xl flex flex-col justify-end p-margin-mobile" id="modal-a">
+<div class="bg-surface-container rounded-2xl max-w-lg w-full mx-auto max-h-[777px] overflow-y-auto flex flex-col shadow-2xl">
+<div class="relative w-full aspect-[16/10] bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="High resolution detailed crop of nomadic traveler in the desert with textured impasto strokes and golden light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAG9S5PTahc1sbspULHW5ViqDvgVS0fJw1ZRDdSsudLhtpGW2UYYYON-e32AFJUAZVyXuhJplsq23_bSgJaEQ5m0zyb2X3ISAPgJ1vBVsSst8xQRtvHPbyffCiiBwy3kqQOazjUelnXDAREdpm_kT1jLU-2PWGQE2nfosoKZr2rTn7RfSgP1zOLOqo-Vl108iEZgbdU0qUj7CaISkuEyupDU8zIVxrmdY66cUmhVB8"/>
+<button class="absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/80 text-on-surface flex items-center justify-center shadow active:scale-95" onclick="closeModal('modal-a')">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">《荒原旅人》詳細設定</h3>
+<span class="px-2.5 py-1 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold">厚塗油畫風</span>
+</div>
+<div class="flex items-center gap-space-lg py-2 border-y border-outline/20">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">創作工時</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">48 小時</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">使用軟體</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">CSP EX + 油彩筆刷</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">畫布尺寸</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">6000 × 4000 px</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-primary">創作理念與技法解析</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            這幅作品是以末日後荒漠生態為題材的原創世界觀插畫。主筆觸使用不透明水彩與厚塗混色刮刀，刻意不經過過度的羽化平滑，保留手繪特有的節奏碎屑。人物斗篷受夕陽照射的受光面與背光冷色調形成強烈冷暖對立。
+          </p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-md text-label-md text-primary">調色盤取樣 (Color Swatches)</span>
+<div class="grid grid-cols-4 gap-2">
+<div class="p-2 rounded bg-surface-container-high flex flex-col items-center gap-1">
+<span class="w-full h-6 rounded bg-[#f59e0b]"></span>
+<span class="font-label-sm text-label-sm text-outline">#F59E0B</span>
+</div>
+<div class="p-2 rounded bg-surface-container-high flex flex-col items-center gap-1">
+<span class="w-full h-6 rounded bg-[#b45309]"></span>
+<span class="font-label-sm text-label-sm text-outline">#B45309</span>
+</div>
+<div class="p-2 rounded bg-surface-container-high flex flex-col items-center gap-1">
+<span class="w-full h-6 rounded bg-[#3f2e1e]"></span>
+<span class="font-label-sm text-label-sm text-outline">#3F2E1E</span>
+</div>
+<div class="p-2 rounded bg-surface-container-high flex flex-col items-center gap-1">
+<span class="w-full h-6 rounded bg-[#1c1917]"></span>
+<span class="font-label-sm text-label-sm text-outline">#1C1917</span>
+</div>
+</div>
+</div>
+<button class="w-full h-11 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center mt-2 hover:bg-surface-bright transition-colors" onclick="closeModal('modal-a')">
+          關閉預覽
+        </button>
+</div>
+</div>
+</div>
+<!-- Modal B: 雨後的便利商店 -->
+<div class="fixed inset-0 z-50 hidden bg-surface-container-lowest/90 backdrop-blur-xl flex flex-col justify-end p-margin-mobile" id="modal-b">
+<div class="bg-surface-container rounded-2xl max-w-lg w-full mx-auto max-h-[777px] overflow-y-auto flex flex-col shadow-2xl">
+<div class="relative w-full aspect-[16/10] bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Close up of rain droplets on glass and reflective neon colors in convenience store anime painting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlq-Mhi6Fdc3yPTenH-I8VOoitDWoHlZ0mrO-Xuo0auulwaxNxuXIsrqvI11AFEjqTP0hNQkYFGU8YwkiBLK4udMdX9Jl4jExXyqBcvDUky0ctt6RuFDn_ftfQnzp5LeSFe7ogb00ttPU1jae2iUV75teHowy18_bOBg-mX5mYjVk8LdB455GPQ29KcXLo6jHFL3enWTkBtNYt8zam5h7cY60V7Qmz_ff0Lb_o3CE"/>
+<button class="absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/80 text-on-surface flex items-center justify-center shadow active:scale-95" onclick="closeModal('modal-b')">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">《雨後的便利商店》氛圍解析</h3>
+<span class="px-2.5 py-1 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">日式動漫風</span>
+</div>
+<div class="flex items-center gap-space-lg py-2 border-y border-outline/20">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">創作工時</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">32 小時</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">使用軟體</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">CSP EX + 漸變對應</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">圖層數</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">68 個</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          重點著墨於柏油路面積水的雙重反射——既倒映了便利商店店內明亮的燈管暖黃，又融合了夜空降下的靛青雨霧。角色撐傘凝視遠方的微視角，營造青春期獨有的微酸與透明感。
+        </p>
+<button class="w-full h-11 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center hover:bg-surface-bright transition-colors" onclick="closeModal('modal-b')">
+          關閉預覽
+        </button>
+</div>
+</div>
+</div>
+<!-- Modal C: 怪盜露卡與機械狗 -->
+<div class="fixed inset-0 z-50 hidden bg-surface-container-lowest/90 backdrop-blur-xl flex flex-col justify-end p-margin-mobile" id="modal-c">
+<div class="bg-surface-container rounded-2xl max-w-lg w-full mx-auto max-h-[777px] overflow-y-auto flex flex-col shadow-2xl">
+<div class="relative w-full aspect-[16/10] bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Turnaround model sheet and multiple expression drawings for female thief character and robot companion" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXJB5BOU84tYtBJB6sZYrDhut1VV0xpabCcy22KexHt758UWzvX3y0h7fdsxB1z--_s3fQtPcE72kIFWAslKQh2A_ypT0nNWWst1UD5kSXWa-zBkVuDd9qUWJTKWXyobL1_A6ouk2LvKACB4RHBlGgw7wxftO_Kc3eecuo2XSXpKwURbOHsfQ_H4sYE2BNBAzRlQDwsNoUAb0N8mUMffR3d74wYb3zme9e5LMN2KE"/>
+<button class="absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/80 text-on-surface flex items-center justify-center shadow active:scale-95" onclick="closeModal('modal-c')">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">《怪盜露卡與機械狗》設定稿</h3>
+<span class="px-2.5 py-1 rounded bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm font-semibold">歐美卡通人物</span>
+</div>
+<div class="flex items-center gap-space-lg py-2 border-y border-outline/20">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">創作工時</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">26 小時</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">形式</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">Model Sheet 轉面</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">線稿核心</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">向量線寬控制</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          採用高動態擠壓拉伸（Squash & Stretch）原則，設計了包括眨眼挑釁、戰鬥嚴肅、失手慌張及寵溺機械狗的 4 種招牌表情。機械狗身結構參考維多利亞發條齒輪與現代單眼感測器。
+        </p>
+<button class="w-full h-11 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center hover:bg-surface-bright transition-colors" onclick="closeModal('modal-c')">
+          關閉預覽
+        </button>
+</div>
+</div>
+</div>
+<!-- Modal D, E, F Generic Lightbox Container -->
+<div class="fixed inset-0 z-50 hidden bg-surface-container-lowest/90 backdrop-blur-xl flex flex-col justify-end p-margin-mobile" id="modal-d">
+<div class="bg-surface-container rounded-2xl max-w-lg w-full mx-auto max-h-[777px] overflow-y-auto flex flex-col shadow-2xl p-space-md gap-3">
+<div class="flex items-center justify-between">
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">《森林精靈的魔藥鋪》道具設定拆解</h4>
+<button class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface" onclick="closeModal('modal-d')">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">耗時 54 小時高精密繪製。包含了銅製蒸餾瓶的腐蝕刻痕、草藥葉脈拓印標籤及螢光苔蘚微環境渲染。</p>
+<button class="w-full h-10 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md" onclick="closeModal('modal-d')">返回圖庫</button>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden bg-surface-container-lowest/90 backdrop-blur-xl flex flex-col justify-end p-margin-mobile" id="modal-e">
+<div class="bg-surface-container rounded-2xl max-w-lg w-full mx-auto max-h-[777px] overflow-y-auto flex flex-col shadow-2xl p-space-md gap-3">
+<div class="flex items-center justify-between">
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">《深海之歌》色彩實驗稿</h4>
+<button class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface" onclick="closeModal('modal-e')">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">耗時 20 小時。實驗深海生物的發光透明組織，在純黑畫布中運用多重發光圖層營造寧靜壓迫感。</p>
+<button class="w-full h-10 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md" onclick="closeModal('modal-e')">返回圖庫</button>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden bg-surface-container-lowest/90 backdrop-blur-xl flex flex-col justify-end p-margin-mobile" id="modal-f">
+<div class="bg-surface-container rounded-2xl max-w-lg w-full mx-auto max-h-[777px] overflow-y-auto flex flex-col shadow-2xl p-space-md gap-3">
+<div class="flex items-center justify-between">
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">《都會疾走》動態速寫</h4>
+<button class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface" onclick="closeModal('modal-f')">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">耗時 16 小時。採用強烈透視網格，以向量畫筆進行 15 分鐘極速姿勢抓取與角色裝備剪影測試。</p>
+<button class="w-full h-10 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md" onclick="closeModal('modal-f')">返回圖庫</button>
+</div>
+</div>
+</div>
+<script>
+  // Filter pill switching logic
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const galleryCards = document.querySelectorAll('.gallery-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Clear active style
+      filterBtns.forEach(b => {
+        b.classList.remove('bg-primary-container', 'text-on-primary-container', 'font-medium');
+        b.classList.add('bg-surface-container', 'text-on-surface-variant');
+        const dot = b.querySelector('span.rounded-full');
+        if (dot) dot.remove();
+      });
+
+      // Set active style
+      btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+      btn.classList.add('bg-primary-container', 'text-on-primary-container', 'font-medium');
+      if (!btn.querySelector('span.rounded-full')) {
+        const dot = document.createElement('span');
+        dot.className = 'w-1.5 h-1.5 rounded-full bg-on-primary-container';
+        btn.prepend(dot);
+      }
+
+      const filterVal = btn.getAttribute('data-filter');
+      galleryCards.forEach(card => {
+        const cat = card.getAttribute('data-category');
+        if (filterVal === 'all' || cat === filterVal) {
+          card.classList.remove('hidden');
+          card.style.opacity = '1';
+        } else {
+          card.classList.add('hidden');
+          card.style.opacity = '0';
+        }
+      });
+    });
+  });
+
+  // Modal open/close helpers
+  function openModal(id) {
+    const target = document.getElementById(id);
+    if (target) {
+      target.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closeModal(id) {
+    const target = document.getElementById(id);
+    if (target) {
+      target.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+  }
+
+  // Dismiss on backdrop click
+  document.querySelectorAll('[id^="modal-"]').forEach(modal => {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal(modal.id);
+      }
+    });
+  });
+</script><footer class="w-full bg-surface-container-lowest mt-space-xl pt-space-lg pb-24 px-margin-mobile flex flex-col gap-space-md"><div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-high w-fit"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Open for Freelance & Animation</span></div><div class="flex flex-col gap-space-xs"><span class="font-label-sm text-label-sm text-outline">Direct Collaboration</span><div class="flex items-center gap-2"><span class="font-body-sm text-body-sm text-on-surface truncate">ab50713845@gmail.com</span><button aria-label="Copy Email" class="w-11 h-11 flex items-center justify-center rounded-lg bg-surface-container hover:bg-surface-container-high text-primary active:scale-95 transition-all" onclick="navigator.clipboard.writeText('ab50713845@gmail.com')"><span class="material-symbols-outlined text-[18px]">content_copy</span></button></div></div><div class="flex items-center gap-space-sm pt-space-xs"><a aria-label="Behance" class="w-11 h-11 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:text-primary transition-colors" href="https://behance.net" rel="noreferrer" target="_blank"><span class="material-symbols-outlined text-[20px]">palette</span></a><a aria-label="Instagram" class="w-11 h-11 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:text-primary transition-colors" href="https://instagram.com" rel="noreferrer" target="_blank"><span class="material-symbols-outlined text-[20px]">photo_camera</span></a><a aria-label="YouTube" class="w-11 h-11 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:text-primary transition-colors" href="https://youtube.com" rel="noreferrer" target="_blank"><span class="material-symbols-outlined text-[20px]">smart_display</span></a><button aria-label="Back to top" class="ml-auto w-11 h-11 rounded-full bg-surface-container-high hover:bg-surface-bright flex items-center justify-center text-primary shadow-[0_2px_12px_rgba(245,158,11,0.15)] active:scale-95 transition-all" onclick="window.scrollTo({top:0,behavior:'smooth'})"><span class="material-symbols-outlined text-[20px]">arrow_upward</span></button></div><div class="pt-space-sm text-center"><p class="font-label-sm text-label-sm text-outline">© 2024 Yi-ting Portfolio. All rights reserved.</p></div></footer></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_-2px_16px_rgba(0,0,0,0.5)]" data-active-classes="text-primary-container font-semibold"><div class="flex justify-around items-center h-16 px-space-xs max-w-md mx-auto"><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="showcase" href="#"><span class="material-symbols-outlined text-[22px]">auto_awesome</span><span class="font-label-sm text-label-sm">精選作品</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="animation-reels" href="#"><span class="material-symbols-outlined text-[22px]">movie_creation</span><span class="font-label-sm text-label-sm">動畫短片</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] transition-colors text-primary-container font-semibold" data-path="illustrations" href="#"><span class="material-symbols-outlined text-[22px]">draw</span><span class="font-label-sm text-label-sm">插畫草稿</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="about-artist" href="#"><span class="material-symbols-outlined text-[22px]">account_circle</span><span class="font-label-sm text-label-sm">關於藝術家</span></a></div></nav></body></html>
