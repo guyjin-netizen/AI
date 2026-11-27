@@ -1,145 +1,138 @@
 # Yi-ting Portfolio ｜ 黃翊庭個人作品集網站
 
-本專案為多媒體設計系學生**黃翊庭（Yi-ting Huang）**的高質感個人作品集網站。依據 `docs/PRD.md` 與 `references/stitch/` 的設計規格，採用 **React + Tailwind CSS** 與 **Obsidian Amber** 高階深色藝廊設計系統（Elevated Dark Gallery）打造，元件完全模組化並支援多裝置響應式體驗。
+本專案為多媒體設計系學生**黃翊庭（Yi-ting Huang）**的個人作品集網站。依據 [PRD.md](docs/PRD.md) 與 `references/stitch/` 的設計規格，採用 **React + React Router + Tailwind CSS** 與 **Obsidian Amber（Elevated Dark Gallery）** 深色藝廊設計系統打造，元件完整模組化並支援手機與桌面響應式瀏覽。
 
 ---
 
 ## 視覺風格與設計系統（Design System）
 
-- **主色調架構**：深黑黑曜石背景（`#0a0a0a` / `#131313`）搭配柔和暖琥珀（Amber `#f59e0b` / `#ffc174`）與微光層次，營造沉浸式藝廊氛圍。
-- **排版字型**：Inter 與 Noto Sans TC 跨語系搭配，具備俐落的字距與行高。
-- **微互動回饋**：卡片浮動、圖片縮放、發光脈衝、音波可視化動態與燈箱彈窗。
+- **主色調與 CSS 變數**：深黑曜石背景（`#131313` / `#0e0e0e`）搭配暖琥珀金橘（`#f59e0b` / `#ffc174`）與細微半透明邊框（`border-white/[0.06]`），並在 `src/index.css` 中定義 `:root` 深色主題變數。
+- **品牌識別**：內建客製化 `BrandLogo.jsx`（「Y + T」幾何動畫影格交織 Monogram SVG），確保所有頁面與裝置皆可清晰顯示。
+- **排版字型**：`Inter` 與 `Noto Sans TC` 跨語系搭配。
+- **圖片懶加載與微互動**：透過 `LazyImage.jsx` 整合 `IntersectionObserver` 延遲載入與載入淡入效果，並內建卡片 hover 縮放、進場淡入、Showreel 播放器進度軸與燈箱彈窗。
 
 ---
 
 ## 系統目錄結構與模組化架構
 
-```
+```text
 AI/
-├── docs/                        # 專案規格書 (PRD.md)
-├── references/                  # Stitch 原始匯出設計檔與規範
-│   └── stitch/
-├── public/                      # 靜態資源
+├── docs/
+│   └── PRD.md                       # 專案開發規格書
+├── references/
+│   └── stitch/                      # Stitch 原始匯出設計檔與 DESIGN.md
 ├── src/
 │   ├── components/
-│   │   ├── common/              # 全域模組
-│   │   │   ├── Header.jsx       # 頂部導航列（支援桌面導航與手機版聯絡快捷按鈕）
-│   │   │   ├── Footer.jsx       # 底部版權、Email一鍵複製、社群連結與回到頂部
-│   │   │   └── BottomNav.jsx    # 行動端底部標籤導航欄（符合 Stitch mobile tab 規範）
-│   │   └── sections/            # 區塊功能元件
-│   │       ├── HeroSection.jsx             # 首頁 Hero 主視覺、動態膠卷時間碼與精選作品卡片
-│   │       ├── WorkflowTracker.jsx         # 核心數據統計與 4 階管線看板
-│   │       ├── FeaturedWorksSection.jsx    # 精選作品網格與即時分類篩選器
-│   │       ├── ShowreelBanner.jsx          # 2024 動畫秀帶精選橫幅
-│   │       ├── ReelPlayerSection.jsx       # 秀帶互動播放器（進度軸、音波圖、章節跳轉）
-│   │       ├── CaseStudyToyBrick.jsx       # 《積木 ToyBrick》深度案例（分鏡切片、角色演進表）
+│   │   ├── common/
+│   │   │   ├── BrandLogo.jsx        # 客製 Y+T 幾何 Monogram SVG Logo
+│   │   │   ├── LazyImage.jsx        # IntersectionObserver 圖片懶加載與容錯元件
+│   │   │   ├── Header.jsx           # 頂部固定導航列（桌面導航 + 聯絡快捷鈕）
+│   │   │   ├── Footer.jsx           # 底部狀態徽章、Email 一鍵複製、社群連結與置頂
+│   │   │   └── BottomNav.jsx        # 行動端底部標籤導航欄
+│   │   └── sections/
+│   │       ├── HeroSection.jsx             # 首頁主視覺、時間碼與代表作卡片
+│   │       ├── WorkflowTracker.jsx         # 創作數據看板與 4 階管線
+│   │       ├── FeaturedWorksSection.jsx    # 精選作品網格與分類篩選器
+│   │       ├── ShowreelBanner.jsx          # 2024 年度動畫秀帶橫幅
+│   │       ├── ReelPlayerSection.jsx       # Showreel 互動播放器（播放計時、章節跳轉、進度拖曳、音波）
+│   │       ├── CaseStudyToyBrick.jsx       # 《積木 ToyBrick》案例研究（含可點擊放大分鏡切片）
 │   │       ├── CaseStudyHey.jsx            # 《嘿！這次是我覺得》動態表演分析
-│   │       ├── WorkflowProcessSection.jsx  # 動畫 4 階段製程解析與專案諮詢卡
-│   │       ├── IllustrationGallery.jsx     # 6 件插畫作品流與分類篩選器
-│   │       ├── IllustrationDetailModal.jsx # 畫作高清燈箱彈窗（色票、圖層結構、技術參數）
-│   │       ├── TechniqueBento.jsx          # Clip Studio Paint 工具深入解析與三特色徽章
-│   │       ├── ArtistSpotlight.jsx         # 藝術家頭像、自述、里程碑與氣氛靜態幀
-│   │       ├── SkillsTree.jsx              # 技能百分比動態進度條與軟體技能庫
-│   │       └── ContactFormSection.jsx      # 信箱複製、合作意願表單與社群連結
-│   ├── data/                    # 獨立資料層（分離邏輯與內容）
-│   │   ├── projects.js          # 動畫專案資料與秀帶章節
-│   │   ├── illustrations.js     # 6 件精選插畫、色票與燈箱資料
-│   │   └── skills.js            # 個人檔案、技能數值與社群連結
-│   ├── pages/                   # 頁面級元件
-│   │   ├── HomePage.jsx         # 精選作品首頁 (Showcase)
-│   │   ├── AnimationReelsPage.jsx # 動畫短片與案例分析 (Animation Reels)
-│   │   ├── IllustrationsPage.jsx  # 2D 插畫與角色設計 (Illustrations)
-│   │   └── AboutContactPage.jsx   # 關於藝術家與聯絡合作 (About & Contact)
-│   ├── App.jsx                  # 應用程式主入口與路由狀態管理
-│   ├── main.jsx                 # React DOM 渲染入口
-│   └── index.css                # Tailwind 與自訂滾動條樣式
-├── index.html                   # HTML 範本（引入 Inter、Noto Sans TC 與 Material Symbols）
-├── tailwind.config.js           # 完整 Obsidian Amber 色彩系統與字級設定
-├── postcss.config.js            # PostCSS 設定
-├── vite.config.js               # Vite 設定
-├── package.json                 # 專案相依性套件清單
-└── ReadMe.md                    # 專案說明文件
+│   │       ├── WorkflowProcessSection.jsx  # 動畫 4 階製程與專案諮詢卡
+│   │       ├── IllustrationGallery.jsx     # 6 件插畫作品流與風格篩選
+│   │       ├── IllustrationDetailModal.jsx # 插畫高清燈箱彈窗（色票、技術參數、圖層拆解）
+│   │       ├── TechniqueBento.jsx          # Clip Studio Paint 工具剖析與三大風格徽章
+│   │       ├── ArtistSpotlight.jsx         # 藝術家自述、里程碑與氣氛靜態幀
+│   │       ├── SkillsTree.jsx              # 專業技能百分比進度條與軟體工具庫
+│   │       └── ContactFormSection.jsx      # Email 複製、合作表單（支援 Formspree / mailto）與社群入口
+│   ├── data/
+│   │   ├── projects.js              # 動畫專案、分鏡切片與 Showreel 章節資料
+│   │   ├── illustrations.js         # 插畫作品、調色盤與燈箱技術細節
+│   │   └── skills.js                # 藝術家檔案、技能數值與社群連結
+│   ├── pages/
+│   │   ├── HomePage.jsx             # 首頁（/）
+│   │   ├── AnimationReelsPage.jsx   # 動畫短片與案例研究（/animation-reels）
+│   │   ├── IllustrationsPage.jsx    # 2D 插畫與角色設計（/illustrations）
+│   │   └── AboutContactPage.jsx     # 關於藝術家與聯絡合作（/about-artist）
+│   ├── App.jsx                      # React Router 路由設定與動態頁面標題管理
+│   ├── main.jsx                     # React 渲染入口
+│   └── index.css                    # Tailwind 指令與 CSS 變數設定
+├── .env.example                     # 環境變數範本（VITE_FORMSPREE_ENDPOINT）
+├── index.html                       # HTML 範本
+├── package.json                     # 專案設定與依賴清單
+├── postcss.config.js                # PostCSS 設定
+├── render.yaml                      # Render Static Site 部署與 SPA Rewrite 設定
+├── tailwind.config.js               # Obsidian Amber 主題色票、字級與動畫設定
+├── vite.config.js                   # Vite 開發伺服器與建置設定
+└── ReadMe.md                        # 本說明文件
 ```
 
 ---
 
-## 實際安裝與相依套件版本
+## 實際安裝套件版本（依據 `node_modules` 實測）
 
 | 套件名稱 | 實際安裝版本 | 用途 |
 |---|---|---|
-| **Node.js** | v20.18.0 (LTS) | 伺服器端 JavaScript 執行環境 |
-| **npm** | 10.8.2 | 套件管理工具 |
-| **React** | 18.3.1 | 前端核心元件框架 |
-| **React DOM** | 18.3.1 | React 瀏覽器渲染引擎 |
-| **Vite** | 5.4.21 | 極速現代前端建置與熱重載伺服器 |
-| **Tailwind CSS** | 3.4.15 | 實用優先之 CSS 框架 |
-| **PostCSS** | 8.4.49 | CSS 轉換處理器 |
-| **Autoprefixer** | 10.4.20 | 自動添加瀏覽器前綴 |
-| **Lucide React** | 0.460.0 | SVG 圖示支援庫 |
+| **react** | `18.3.1` | 前端 UI 元件核心框架 |
+| **react-dom** | `18.3.1` | React 瀏覽器 DOM 渲染 |
+| **react-router-dom** | `6.30.6` | 單頁應用路由切換與平滑捲動 |
+| **lucide-react** | `0.460.0` | 圖示庫支援 |
+| **clsx** | `2.1.1` | 條件式 className 組合 |
+| **tailwind-merge** | `2.6.1` | Tailwind 類別衝突合併工具 |
+| **vite** | `5.4.21` | 前端開發伺服器與生產建置工具 |
+| **@vitejs/plugin-react** | `4.7.0` | Vite React Fast Refresh 外掛 |
+| **tailwindcss** | `3.4.19` | 實用優先 CSS 框架 |
+| **postcss** | `8.5.33` | CSS 編譯處理器 |
+| **autoprefixer** | `10.6.2` | CSS 跨瀏覽器前綴補全 |
+
+> 本機驗證執行環境：`Node.js v22.22.0`（透過本機安裝之 Node 執行檔直跑 Vite）。
 
 ---
 
 ## 啟動方式與本機網址
 
-### 1. 安裝相依套件
+### 1. 標準環境啟動（已將 Node.js / npm 加入系統 PATH）
 ```bash
 npm install
-```
-
-### 2. 啟動本機開發伺服器
-```bash
 npm run dev
 ```
-啟動後終端機將顯示本機網址：
-```
-➜  Local:   http://localhost:3000/
-➜  Network: http://[your-ip]:3000/
+
+### 2. 若本機未將 Node / npm 加入 PATH（直接呼叫 Node 執行 Vite）
+```powershell
+& "E:\Downloads\ADB\PS\Adobe Photoshop 2026\node.exe" .\node_modules\vite\bin\vite.js --port 3000
 ```
 
-### 3. 生產環境編譯打包（驗證部署）
+啟動後可於瀏覽器開啟：
+- **Local**：`http://localhost:3000/`
+- **各頁面路徑**：
+  - 首頁精選：`http://localhost:3000/`
+  - 動畫短片與案例研究：`http://localhost:3000/animation-reels`
+  - 2D 插畫與角色設計：`http://localhost:3000/illustrations`
+  - 關於藝術家與聯絡合作：`http://localhost:3000/about-artist`
+
+### 3. 生產環境建置與預覽
 ```bash
 npm run build
-```
-編譯產物將儲存於 `dist/` 資料夾中。
-
-### 4. 預覽打包產物
-```bash
 npm run preview
 ```
 
 ---
 
-## 核心功能與頁面導覽
+## 部署至 Render（Static Site）
 
-1. **精選作品（Showcase）**
-   - 劇院級 Hero 主視覺，搭配時間碼磁帶意象（`FR-24.00 FPS / SEQ.01`）與動態脈衝。
-   - 核心數據看板（2 部獨立動畫主導、20+ 精選厚塗插畫、150+ 動態分鏡繪製）與 4 階創作管線。
-   - 支援 5 類標籤即時切換篩選（全部、2D動畫、厚塗插畫、人物設計、分鏡腳本）。
-   - 旗艦專案《積木 ToyBrick》與《嘿！這次是我覺得》作品卡。
-
-2. **動畫短片（Animation Reels）**
-   - 2024 動畫秀帶播放器介面，支援章節切換（`00:15 積木開場`、`01:05 打鬥與追逐`、`01:50 抒情日常`）、進度軸拖曳與音波頻譜可視化。
-   - 《積木 ToyBrick》旗艦專案深度案例研究：包含 4 幕分鏡切片（Cut 01-04）與主角色「諾亞」三階段演進表（早期草稿、透視驗證、最終定案）。
-   - 《嘿！這次是我覺得》動態表演分析（預備動作 Anticipation、殘影抹拭 Smear Frames、微表情緩入緩出）。
-   - 4 階動畫工業工作流（文本構思、分鏡預覽、原畫中割、上色特效）。
-
-3. **2D 插畫與角色設計（Illustrations）**
-   - 6 件精選代表作品流，支援 5 類篩選（全部、厚塗油畫風、日式動漫、歐美卡通、概念美術）。
-   - 點擊卡片或「探索設定」可開啟**全螢幕高清燈箱彈窗（Lightbox Modal）**，詳細檢視調色盤色票、技術參數（畫布規格、筆刷、光源）與圖層結構筆記。
-   - Clip Studio Paint EX 專業工作站深入解析與三大招牌視覺風格（強烈光影對比、故事感構圖、多變筆觸質地）。
-
-4. **關於藝術家與聯絡（About & Contact）**
-   - 藝術家頭像、自述理念、專業技能百分比動態進度條（插畫 95%、動畫 90%、分鏡 92%）。
-   - 精熟軟體工具庫（CSP、AN、PS、AE、SBP）。
-   - 一鍵複製信箱至剪貼簿（附 Toast 提示），直接點擊調用系統郵件客戶端。
-   - 快速專案需求表單（支援動畫專案、商業插畫、委託合作、學校交流等多類型快速預填）。
-
----
-
-## 部署至 Render 規範
-
-專案已完成相容於 Render 的設定：
+專案根目錄已附帶 `render.yaml`，設定如下：
 - **Service Type**：Static Site
 - **Build Command**：`npm install && npm run build`
 - **Publish Directory**：`dist`
-- **Redirects / Rewrites**：`/* -> /index.html (200)`
+- **Rewrite Rule**：`/* -> /index.html`（確保重新整理子路由時不出現 404）
+
+---
+
+## 尚未完成與待補充項目
+
+1. **正式影音與個人素材替換**：
+   - `ReelPlayerSection` 目前為高質感互動播放器介面（支援播放計時、進度條拖曳與章節切換），尚未串接正式的 YouTube / Vimeo Showreel 嵌入影片連結。
+   - 現階段作品圖片與頭像仍引用 Stitch 匯出之範例連結，未來建議替換為本地 `public/` 壓縮後之 `.webp` 原圖與個人真實照片。
+2. **社群帳號真實連結**：`src/data/skills.js` 中的 Behance、Instagram、YouTube、ArtStation 目前為官方首頁占位網址，待補上個人帳號頁面 URL。
+3. **線上表單服務與進階 SEO**：
+   - 聯絡表單已支援 `VITE_FORMSPREE_ENDPOINT` 環境變數串接 Formspree；在未設定前會自動使用 `mailto:` 開啟郵件客戶端。
+   - `react-helmet-async`、Framer Motion 進場動畫及規格書內提及的「3D 模型檢視器 / CMS 後台 / 多語系切換」尚未實作（目前以 2D 插畫與動畫作品集為主軸）。

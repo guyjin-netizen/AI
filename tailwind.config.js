@@ -81,7 +81,16 @@ export default {
         "body-sm": ["13px", { lineHeight: "20px", fontWeight: "400" }],
         "label-md": ["13px", { lineHeight: "18px", letterSpacing: "0.03em", fontWeight: "500" }],
         "label-sm": ["11px", { lineHeight: "16px", letterSpacing: "0.06em", fontWeight: "600" }],
-      }
+      },
+      keyframes: {
+        "fade-in": {
+          "0%": { opacity: "0", transform: "translateY(6px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        "fade-in": "fade-in 0.25s ease-out forwards",
+      },
     },
   },
   plugins: [],
